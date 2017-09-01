@@ -36,7 +36,7 @@ class Compiled
     {
         $this->drawing = $this->view();
         $layout = 'Layouts::dynaform';
-        return $this->drawing->make($layout, ['data' => $this->data, 'structure' => $this->getJsonStructure()]);
+        return $this->drawing->make($layout, ['data' => json_encode($this->data), 'structure' => $this->getJsonStructure()]);
     }
 
     /**

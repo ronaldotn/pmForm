@@ -15,14 +15,17 @@
         </div>
     </div>
 </div>
-<script>
-    var structure = JSON.parse('{!! $structure !!}');
-</script>
+<input type="hidden" name="structure" id="structure" value='{!! $structure !!}'>
+<input type="hidden" name="data" id="data" value='{!! $data !!}'>
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
 <script type="text/javascript" src="/lib/js/next-form.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/lib/js/main.js"></script>
+<script>
+    var structure = JSON.parse($('#structure').val());
+    var data = JSON.parse($('#data').val());
+</script>
 </body>
 </html>
